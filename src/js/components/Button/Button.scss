@@ -1,0 +1,13 @@
+@import "colors.scss";
+
+.button {
+	height: 40px;
+	display: flex;
+	&.primary {
+		color: $button-color-primary;
+	}
+
+	&.secondary {
+		color: $button-color-secondary;
+	}
+}
