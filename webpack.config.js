@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = (env, argv) => {
-    const isDev = argv.mode === "development"
+    const isDev = argv.mode === "development";
 
     const htmlWebPackPlugin = new HtmlWebPackPlugin({
         template: "./src/index.html",
