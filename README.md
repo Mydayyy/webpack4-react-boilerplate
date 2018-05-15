@@ -40,3 +40,4 @@ Please keep the following in mind:
 ### Roadmap
 - Extend boilerplate to support multiple languages
 - Extend boilerplate to include router and multiple pages
+- Extend boilerplate to include a static site generator
