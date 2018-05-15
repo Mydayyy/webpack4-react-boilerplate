@@ -24,6 +24,11 @@ variables. See `src/js/components/Button/Button.scss` for an example. Please
 make sure to also write the `.scss` extensions when including, otherwise
 webpack may try to include paths from node_modules.
 
+#### CSS Autoprefixer
+The resulting css file will automatically be prefixed according to the rules
+specified inside the package.json (key: browserslist). Prefixing is done in
+production as well as in development.
+
 #### Hot Module Replacement (HRM)
 All css changes will be displayed without reloading the page.
 

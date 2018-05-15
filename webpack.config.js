@@ -40,7 +40,17 @@ module.exports = (env, argv) => {
                 use: [{
                     loader: isDev ? "style-loader" : MiniCssExtractPlugin.loader
                 }, {
-                    loader: "css-loader"
+                    loader: "css-loader",
+                    options: {
+                        importLoaders: 1
+                    }
+                }, {
+                    loader: "postcss-loader",
+                    options: {
+                        sourceMap: false,
+                        ident: "postcss",
+                        plugins: () => [require("autoprefixer")({})]
+                    }
                 }, {
                     loader: "sass-loader",
                     options: {
@@ -62,9 +72,9 @@ module.exports = (env, argv) => {
             splitChunks: {
                 cacheGroups: {
                     styles: {
-                        name: 'styles',
+                        name: "styles",
                         test: /\.css$/,
-                        chunks: 'all',
+                        chunks: "all",
                         enforce: true
                     }
                 }
