@@ -74,8 +74,7 @@ module.exports = (env, argv) => {
                     styles: {
                         name: "styles",
                         test: /\.css$/,
-                        chunks: "all",
-                        enforce: true
+                        chunks: "all"
                     }
                 }
             }
