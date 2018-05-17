@@ -1,7 +1,7 @@
 const path = require("path");
 
 const PUBLIC_PATH = "/";
-const ENABLE_STATIC_SITE_GENERATOR = true;
+const ENABLE_STATIC_SITE_GENERATOR = false;
 
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
