@@ -5,10 +5,10 @@ import classNames from "classnames";
 import "./Button.scss";
 
 class Button extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
     onClick() {
         this.props.onClick();
@@ -26,10 +26,10 @@ class Button extends React.Component {
 }
 
 Button.defaultProps = {
-	name: "",
-	primary: false,
-	secondary: false,
-	onClick: () => {}
+    name: "",
+    primary: false,
+    secondary: false,
+    onClick: () => {}
 };
 
 Button.propTypes = {
