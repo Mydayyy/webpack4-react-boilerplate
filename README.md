@@ -32,11 +32,6 @@ production as well as in development.
 #### Hot Module Replacement (HRM)
 All css changes will be displayed without reloading the page.
 
-#### Static Site Generator
-You can output a static site by setting `ENABLE_STATIC_SITE_GENERATOR` to true
-inside the webpack.config.js. This is useful for SEO  and similiar purposes.
-Defaults to false
-
 As for javascript changes, this boilerplate uses
 [gaearon/react-hot-loader](https://github.com/gaearon/react-hot-loader).
 Please keep the following in mind:
@@ -44,8 +39,14 @@ Please keep the following in mind:
 > There is no way to hot-update constructor code, as result even new
 > components will be born as the first ones, and then grow into the last ones.
 > As of today, this issue cannot be solved.
-
 ([source/gaearon/react-hot-loader](https://github.com/gaearon/react-hot-loader#new-components-keep-executing-the-old-code))
+
+
+#### Static Site Generator
+You can output a static site by setting `ENABLE_STATIC_SITE_GENERATOR` to true
+inside the webpack.config.js. This is useful for SEO  and similiar purposes.
+Defaults to false
+
 
 ### Roadmap
 - Extend boilerplate to support multiple languages
