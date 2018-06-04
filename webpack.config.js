@@ -1,7 +1,7 @@
 const path = require("path");
 
 const PUBLIC_PATH = "/";
-const ENABLE_STATIC_SITE_GENERATOR = false;
+const ENABLE_STATIC_SITE_GENERATOR = true;
 
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -53,7 +53,8 @@ module.exports = (env, argv) => {
         resolve: {
             extensions: [".js", ".jsx"],
             alias: {
-                ["~"]: path.resolve(__dirname, "src/js")
+                ["~"]: path.resolve(__dirname, "src/js"),
+                ["__assets__"]: path.resolve(__dirname, "assets")
             }
         },
         module: {
@@ -84,11 +85,18 @@ module.exports = (env, argv) => {
                                 ident: "postcss",
                                 plugins: () => [require("autoprefixer")({})]
                             }
+                        }, {
+                            loader: "resolve-url-loader",
+                            options: {
+                                sourceMap: true,
+                                debug: false
+                            }
                         },
                         {
                             loader: "sass-loader",
                             options: {
-                                includePaths: [path.resolve(__dirname, "src/scss")]
+                                includePaths: [path.resolve(__dirname, "src/scss"), path.resolve(__dirname, "assets/fonts")],
+                                sourceMap: true
                             }
                         }
                     ]
@@ -96,6 +104,20 @@ module.exports = (env, argv) => {
                 {
                     test: /\.ejs$/,
                     loader: "ejs-loader"
+                },
+                {
+                    test: /\.(eot|ttf|woff|woff2)$/,
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[ext]"
+                    }
+                },
+                {
+                    test: /\.(svg|png|jpg|gif)$/,
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[ext]"
+                    }
                 }
             ]
         },
