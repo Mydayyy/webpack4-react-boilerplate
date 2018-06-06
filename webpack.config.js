@@ -1,7 +1,7 @@
 const path = require("path");
 
 const PUBLIC_PATH = "/";
-const ENABLE_STATIC_SITE_GENERATOR = true;
+const ENABLE_STATIC_SITE_GENERATOR = false;
 
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -36,13 +36,7 @@ module.exports = (env, argv) => {
         _: "underscore"
     });
 
-    const definePlugin = new webpack.DefinePlugin({
-        "process.env": {
-            PUBLIC_PATH: PUBLIC_PATH
-        }
-    });
-
-    let plugins = [ENABLE_STATIC_SITE_GENERATOR && !isDev ? staticSiteGeneratorPlugin : htmlWebPackPlugin, miniCssExtractPlugin, providePlugin, definePlugin];
+    let plugins = [ENABLE_STATIC_SITE_GENERATOR && !isDev ? staticSiteGeneratorPlugin : htmlWebPackPlugin, miniCssExtractPlugin, providePlugin];
 
     return {
         entry: "./src/js/index.js",
