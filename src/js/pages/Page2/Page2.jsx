@@ -5,7 +5,7 @@ import Button from "~/components/Button/Button";
 
 class Page2 extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {};
     }
 
@@ -19,7 +19,7 @@ class Page2 extends React.Component {
                     Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Et tortor at risus viverra adipiscing. Sed libero enim sed faucibus. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Ut faucibus pulvinar elementum integer enim neque. Ultricies leo integer malesuada nunc vel risus commodo. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eros donec ac odio tempor. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Nam libero justo laoreet sit amet cursus sit amet dictum. Urna molestie at elementum eu facilisis sed odio morbi quis.
 				</p>
                 <Link to={"/page1"}>
-                    <Button name="Go to page1" />
+                    <Button name="Go to page1";/>
                 </Link>
             </div>
         );

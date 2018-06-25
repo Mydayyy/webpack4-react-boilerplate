@@ -2,6 +2,7 @@ const path = require("path");
 
 const PUBLIC_PATH = "/";
 const ENABLE_STATIC_SITE_GENERATOR = false;
+const ESLINT = true;
 
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -12,6 +13,11 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
 
 module.exports = (env, argv) => {
+
+    console.log("\x1b[32m", "Static Site Generator: " + ENABLE_STATIC_SITE_GENERATOR + "\n");
+
+    console.log("\x1b[32m", "EsLint: " + ESLINT + "\n");
+
     const isDev = argv.mode === "development";
 
     const htmlWebPackPlugin = new HtmlWebPackPlugin({
@@ -36,6 +42,7 @@ module.exports = (env, argv) => {
         _: "underscore"
     });
 
+
     let plugins = [ENABLE_STATIC_SITE_GENERATOR && !isDev ? staticSiteGeneratorPlugin : htmlWebPackPlugin, miniCssExtractPlugin, providePlugin];
 
     return {
@@ -56,10 +63,8 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(js|jsx)$/,
                     exclude: /node_modules/,
-                    use: {
-                        loader: "babel-loader"
-                    }
-                },
+                    use: ESLINT ? ["babel-loader", "eslint-loader"] : "babel-loader",
+                 },
                 {
                     test: /\.s?[ac]ss$/,
                     use: [
