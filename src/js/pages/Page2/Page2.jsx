@@ -18,8 +18,8 @@ class Page2 extends React.Component {
                     Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Viverra vitae congue eu consequat ac. Praesent tristique magna sit amet purus gravida quis. Sit amet facilisis magna etiam. Facilisis leo vel fringilla est ullamcorper. Leo vel orci porta non pulvinar neque laoreet suspendisse. Tristique sollicitudin nibh sit amet commodo. Pulvinar neque laoreet suspendisse interdum consectetur libero. Facilisis gravida neque convallis a cras semper auctor. In cursus turpis massa tincidunt dui ut ornare. Id velit ut tortor pretium viverra suspendisse potenti nullam. Et malesuada fames ac turpis. Sed felis eget velit aliquet sagittis id consectetur.
                     Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Et tortor at risus viverra adipiscing. Sed libero enim sed faucibus. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Ut faucibus pulvinar elementum integer enim neque. Ultricies leo integer malesuada nunc vel risus commodo. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eros donec ac odio tempor. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Nam libero justo laoreet sit amet cursus sit amet dictum. Urna molestie at elementum eu facilisis sed odio morbi quis.
 				</p>
-                <Link to={"/page1"}>
-                    <Button name="Go to page1";/>
+                <Link to={"/"}>
+                    <Button name="Go to page1"/>
                 </Link>
             </div>
         );

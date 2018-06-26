@@ -4,28 +4,48 @@ import {hot} from "react-hot-loader";
 
 import {Route, Switch, Redirect} from "react-router-dom";
 
-import Page1 from "~/pages/Page1/Page1";
+import index from "~/pages/index/index";
 import Page2 from "~/pages/Page2/Page2";
+import Header from "~/components/Header/Header"
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            menueActive : false
+
+        };
+    };
+
+    overlay(e){
+        this.setState({
+            menueActive: e
+        })
+    }
+
+    closeSidebar(){
+        if (this.state.menueActive) {
+            this.setState({
+                menueActive: false
+            })
+        }
     }
 
     render() {
         return (
-            <div id="app">
-                <Switch>
-                    <Route exact={true} name="/" path="/" component={Page1} />
-                    <Route exact={true} name="page1" path="/page1" component={Page1} />
-                    <Route exact={true} name="page2" path="/page2" component={Page2} />
-                    <Route
-                        render={function() {
-                            return <h1>We found exactly zero pages at the path you were looking for. Sorry!</h1>;
-                        }}
-                    />
-                </Switch>
+            <div id="app" >
+                <Header closeSidebar={this.state.menueActive} onChange={(e)=> {this.overlay(e)}}/>
+                <div id="content" className="container-fluid" style={{opacity: this.state.menueActive ? 0.4 : 1}} onClick={()=>this.closeSidebar()}>
+                    <Switch >
+                        <Route exact={true} name="/" path="/" component={index} />
+                        <Route exact={true} name="page2" path="/page2" component={Page2} />
+                        <Route
+                            render={function() {
+                                return <h1>We found exactly zero pages at the path you were looking for. Sorry!</h1>;
+                            }}
+                        />
+                    </Switch>
+                </div>
             </div>
         );
     }

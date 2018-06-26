@@ -11,6 +11,7 @@ import {renderToString} from "react-dom/server";
 import App from "./App";
 import index from "./index.ejs";
 
+
 if (typeof global.document !== "undefined") {
     ReactDOM.render(
         <BrowserRouter>

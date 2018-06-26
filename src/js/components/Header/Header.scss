@@ -1,0 +1,105 @@
+@import "global.scss";
+
+header{
+    z-index: 1000;
+    width: 100%;
+    display: inline-block;
+    position: sticky;
+    height: 100%;
+    background-color: $secondary-sidebar-color;
+    top: 0%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+//logo
+
+.logo{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+
+// Burger Menue3
+.menue-container {
+    z-index: 1000;
+    min-width:50px;
+    display: inline-block;
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translate(-93%, -50%);
+    cursor: pointer;
+    transition: 0.4s;
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    @media (max-width: 940px){
+        left: 14%;
+        top: 50%;
+        transform: translate(-86%, -50%);
+    }
+}
+
+.change {
+    left: 25%;
+    top: 40%;
+    transform: translate(-75%, -60%);
+    @media (max-width: 940px){
+        left: 87%;
+        top: 50%;
+        transform: translate(-13%, -50%);
+    }
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .bar2 {opacity: 0;}
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+}
+
+
+//sideBar
+.sidebar{
+    top: 0%;
+    height: 100%;
+    width: 20%;
+    min-width: 190px;
+    background: $primary-sidebar-color;
+    position: fixed;
+    display: block;
+    border-right: 1px solid rgb(230, 230, 230);
+    -webkit-transition: left 0.4s cubic-bezier(0.38, 0.09, 0.62, 0.93);
+    transition: left 0.4s cubic-bezier(0.38, 0.09, 0.62, 0.93);
+    &.opened{
+        left: 0%;
+    }
+    &.closed{
+        left: -100%
+    }
+    .sidebar-nav{
+        a{
+            text-align: center;
+            display: block;
+            position: relative;
+            .navitem{
+                display: block;
+                position: relative;
+                padding: 20px 0px;
+                color: #000;
+                &:hover{
+                    background-color: rgba(201, 201, 201, 0.43);
+                }
+            }
+        }
+    }
+
+}

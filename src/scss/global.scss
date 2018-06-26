@@ -1,9 +1,14 @@
 @import "fonts.scss";
+@import "colors.scss";
 
 body, html {
 	margin: 0;
 	width: 100%;
 	min-height: 100%;
+}
+
+#content{
+	transition: opacity 0.4s
 }
 
 p {

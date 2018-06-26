@@ -9,7 +9,6 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
 
 module.exports = (env, argv) => {
