@@ -3,6 +3,8 @@ const path = require("path");
 const PUBLIC_PATH = "/";
 const ENABLE_STATIC_SITE_GENERATOR = false;
 const ESLINT = true;
+const BOOTSRAP = true;
+
 
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -16,6 +18,8 @@ module.exports = (env, argv) => {
     console.log("\x1b[32m", "Static Site Generator: " + ENABLE_STATIC_SITE_GENERATOR + "\n");
 
     console.log("\x1b[32m", "EsLint: " + ESLINT + "\n");
+
+    console.log("\x1b[32m", "Bootstrap: " + BOOTSRAP + "\n");
 
     const isDev = argv.mode === "development";
 

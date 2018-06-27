@@ -6,9 +6,9 @@ header{
     display: inline-block;
     position: sticky;
     height: 100%;
-    background-color: $secondary-sidebar-color;
+    background-color: $header-color;
     top: 0%;
-    border-bottom: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid $border-color;
 }
 
 //logo
@@ -76,7 +76,7 @@ header{
     background: $primary-sidebar-color;
     position: fixed;
     display: block;
-    border-right: 1px solid rgb(230, 230, 230);
+    border-right: 1px solid $border-color;
     -webkit-transition: left 0.4s cubic-bezier(0.38, 0.09, 0.62, 0.93);
     transition: left 0.4s cubic-bezier(0.38, 0.09, 0.62, 0.93);
     &.opened{
@@ -86,20 +86,75 @@ header{
         left: -100%
     }
     .sidebar-nav{
-        a{
-            text-align: center;
+        .navitem{
+            padding: 5px 0px 0px 0px;
+            border-bottom: 1px solid $border-color;
             display: block;
             position: relative;
-            .navitem{
+            color: #000;
+            a{
+                text-align: center;
                 display: block;
                 position: relative;
-                padding: 20px 0px;
-                color: #000;
                 &:hover{
-                    background-color: rgba(201, 201, 201, 0.43);
+                        background: none;
+                }
+            }
+            &:hover{
+                background-color: $hover-color;
+            }
+            &.dropdown{
+                .dropdownArrow{
+                    position: relative;
+                    &:after{
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 40%;
+                        left: 62%;
+                        transform: translate(-38% -60%);
+                        display: block;
+                        border-top: 5px solid transparent;
+                        border-bottom: 5px solid transparent;
+                        border-left: 5px solid $border-color;
+                    }
+                }
+                .dropdown-container{
+                    opacity: 0;
+                    height: 100%;
+                    max-height: 0px;
+                    overflow: hidden;
+                    position: relative;
+                    display: block;
+                    transition: max-height 0.8s 0.1s, opacity 0.8s 0.2s;
+                    text-decoration: none;
+                    padding: 0px;
+                    list-style: none;
+                    .dropdown-item{
+                        background-color: $dropdown-color;
+                        display: block;
+                        position: relative;
+                        padding: 10px 0px;
+                        &:hover{
+                            background-color: #fff;
+                        }
+                    }
+
+                }
+
+                &:hover{
+                    .dropdownArrow::after{
+                        transform: rotate(90deg);
+                    }
+                    .dropdown-container{
+                        opacity: 1;
+                        background-color: $hover-color;
+                        max-height: 500px;
+
+                    }
                 }
             }
         }
     }
-
 }

@@ -14,12 +14,25 @@ class Header extends React.Component {
             nav: [
                 {
                     title: "Home",
-                    link: "/"
+                    link: "/",
                 },
                 {
-                    title: "Page2",
-                    link: "/page2"
-                }
+                    title: "Pages",
+                    link: [
+                        {
+                            title: "Home",
+                            link: "/",
+                        },
+                        {
+                            title: "Page2",
+                            link: "/page2",
+                        }
+                    ]
+                },
+                {
+                    title: "Page3",
+                    link: "/",
+                },
             ],
             sidebarActive: this.props.closeSidebar
         };

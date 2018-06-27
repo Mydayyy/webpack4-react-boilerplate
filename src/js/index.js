@@ -8,6 +8,7 @@ import ReactDOM from "react-dom";
 import {BrowserRouter, StaticRouter} from "react-router-dom";
 import {renderToString} from "react-dom/server";
 
+
 import App from "./App";
 import index from "./index.ejs";
 

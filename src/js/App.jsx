@@ -8,6 +8,7 @@ import index from "~/pages/index/index";
 import Page2 from "~/pages/Page2/Page2";
 import Header from "~/components/Header/Header"
 
+
 class App extends React.Component {
     constructor(props) {
         super(props);
