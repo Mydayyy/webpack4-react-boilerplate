@@ -8,7 +8,11 @@ body, html {
 }
 
 #content{
-	transition: opacity 0.4s
+	transition: opacity 0.4s;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	min-height: 1000px;
 }
 
 p {
@@ -17,4 +21,9 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-bold;
+}
+
+#app{
+	min-height: 100%;
+	position: relative;
 }

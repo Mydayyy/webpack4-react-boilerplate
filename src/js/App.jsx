@@ -7,6 +7,7 @@ import {Route, Switch, Redirect} from "react-router-dom";
 import index from "~/pages/index/index";
 import Page2 from "~/pages/Page2/Page2";
 import Header from "~/components/Header/Header"
+import Footer from "~/components/Footer/Footer"
 
 
 class App extends React.Component {
@@ -46,7 +47,9 @@ class App extends React.Component {
                             }}
                         />
                     </Switch>
+                <Footer />
                 </div>
+
             </div>
         );
     }

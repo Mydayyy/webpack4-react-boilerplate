@@ -1,0 +1,26 @@
+@import "global.scss";
+
+footer{
+    width: 100%;
+    margin-top: 30px;
+    position: absolute;
+    top: 100%;
+    bottom: 0%;
+    background-color: $primary-footer-color;
+    border-top: 1px solid $border-color;
+    min-height: 100px;
+    nav{
+        div{
+            h5{
+                text-decoration: underline;
+            }
+            .footer-link-container{
+                list-style-type: none;
+                padding: 0px;
+                li{
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+}
