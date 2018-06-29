@@ -13,7 +13,7 @@ class Legal extends React.Component {
 
     render() {
         return (
-            <div className="row" style={{marginTop: "30px"}}>
+            <div className="row" style={{marginTop: "50px", marginBottom: "20px"}}>
                 <span className="col-lg-12 col-md-12 col-sm-12 col-xs-12" style={{textAlign: "center"}}>
                     © 2011 JOHN DOE ALL RIGHTS RESERVED
                 </span>
