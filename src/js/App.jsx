@@ -4,8 +4,8 @@ import {hot} from "react-hot-loader";
 
 import {Route, Switch, Redirect} from "react-router-dom";
 
-import index from "~/pages/index/index";
-import Page2 from "~/pages/Page2/Page2";
+import Index from "~/pages/Index/Index";
+import Contact from "~/pages/Contact/Contact";
 import Header from "~/components/Header/Header"
 import Footer from "~/components/Footer/Footer"
 
@@ -39,8 +39,8 @@ class App extends React.Component {
                 <Header closeSidebar={this.state.menueActive} onChange={(e)=> {this.overlay(e)}}/>
                 <div id="content" className="container-fluid" style={{opacity: this.state.menueActive ? 0.4 : 1}} onClick={()=>this.closeSidebar()}>
                     <Switch >
-                        <Route exact={true} name="/" path="/" component={index} />
-                        <Route exact={true} name="page2" path="/page2" component={Page2} />
+                        <Route exact={true} name="Home" path="/" component={Index} />
+                        <Route exact={true} name="Contact" path="/contact" component={Contact} />
                         <Route
                             render={function() {
                                 return <h1>We found exactly zero pages at the path you were looking for. Sorry!</h1>;

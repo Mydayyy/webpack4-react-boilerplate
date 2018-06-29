@@ -19,6 +19,10 @@ footer{
                 padding: 0px;
                 li{
                     margin: 10px 0px;
+                    &.footer-social{
+                        margin: 10px 10px 0px 0px;
+                        padding: 0px;
+                    }
                 }
             }
         }

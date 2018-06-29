@@ -1,0 +1,93 @@
+@import "global.scss";
+
+.reg-form{
+    margin-top: 30px;
+    justify-content: center;
+    height: 100%;
+    display: block;
+    position: relative;
+
+    h2{
+        margin: 50px auto;
+        display: block;
+        text-align: center;
+    }
+
+    .error{
+        border-color: $border-color;
+    }
+    textarea, input, select{
+        width: 100%;
+        padding: 10px 10px;
+        display: inline-flex;
+        // margin: 5px 30px;
+        font-size: 12px;
+        line-height: 18px;
+        border-radius: 0;
+        border: 1px solid rgba(0,0,0,0.3);
+    }
+
+    select{
+        height: 42px;
+    }
+
+    label{
+        p{
+            margin-left: 0px;
+            margin-bottom: 0px;
+            font-family: 'DB Head', sans-serif;
+        }
+    }
+    input[type=submit]{
+        display: block;
+        background-color: $border-color;
+        color: #fff;
+        text-align: center;
+        min-height: 40px;
+        min-width: 100px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 30px;
+        -webkit-appearance:none;
+
+
+        &[disabled]{
+            opacity: 0.4;
+        }
+    }
+
+}
+
+.g-recaptcha{
+    margin-top: 20px;
+
+    @media all and (max-width: 340px){
+        margin-left: -20px;
+        margin-right: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.panel{
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 20px 0 0;
+
+    &.error{
+        border-color: $border-color;
+        background-color: lighten($border-color, 50%);
+        color: red;
+    }
+
+    &.success{
+        border-color: darken(#dff0d8, 70%);
+        background-color: #dff0d8;
+        color: darken(#dff0d8, 60%);
+    }
+}

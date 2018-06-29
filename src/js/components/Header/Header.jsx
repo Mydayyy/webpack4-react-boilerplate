@@ -25,8 +25,8 @@ class Header extends React.Component {
                             link: "/",
                         },
                         {
-                            title: "Page2",
-                            link: "/page2",
+                            title: "Contact",
+                            link: "/contact",
                         }
                     ]
                 },

@@ -1,12 +1,10 @@
 import React from "react";
 import {Link} from "react-router-dom";
-
-import Button from "~/components/Button/Button";
 import image from "__assets__/img/dummy.png";
 
-import "./index.scss";
+import "./Index.scss";
 
-class Page1 extends React.Component {
+class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -25,4 +23,4 @@ class Page1 extends React.Component {
     }
 }
 
-export default Page1;
+export default Index;

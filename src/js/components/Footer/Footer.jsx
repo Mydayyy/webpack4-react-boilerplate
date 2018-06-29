@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import FooterLinks from "./Blocks/FooterLinks";
-import Legal from "./Blocks/Legal";
+
 
 import "./Footer.scss";
 
@@ -63,6 +63,11 @@ class Footer extends React.Component {
                             title: "Instagram",
                             link: "/page2",
                             icon: "/assets/img/ig.svg"
+                        },
+                        {
+                            title: "Linked In",
+                            link: "/page2",
+                            icon: "/assets/img/linkedin.svg"
                         }
                     ]
                 }
@@ -73,9 +78,9 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <footer className="container-fluid">
+            <footer className="row">
                 <FooterLinks links={this.state.links}/>
-                <Legal />
+
             </footer>
         );
     }
