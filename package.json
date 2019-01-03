@@ -14,10 +14,10 @@
         "last 2 version"
     ],
     "devDependencies": {
-        "babel-core": "^6.26.3",
-        "babel-loader": "^7.1.5",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.24.1",
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.0",
         "css-loader": "^0.28.11",
         "ejs-loader": "^0.3.1",
         "html-webpack-plugin": "^3.2.0",
@@ -36,7 +36,7 @@
         "webpack-dev-server": "^3.1.14"
     },
     "dependencies": {
-        "babel-polyfill": "^6.26.0",
+        "@babel/polyfill": "^7.0.0",
         "classnames": "^2.2.6",
         "file-loader": "^1.1.11",
         "normalize.css": "^8.0.1",
