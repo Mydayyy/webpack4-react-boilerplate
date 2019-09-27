@@ -8,6 +8,14 @@ The following features are included:
 
 ### Features
 
+#### Babel Proposals
+
+This boilerplate has three proposals installed and enabled. These are:
+
+- [plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
+- [plugin-proposal-nullish-coalescing-operator](https://babeljs.io/docs/en/babel-plugin-proposal-nullish-coalescing-operator)
+- [plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
+
 #### CSS Extraction
 In production, the css will be extracted and put into its own file
 called main.contenthash.css. To avoid browser caching, contenthash will be
